@@ -1,0 +1,63 @@
+<h2>Manage Bookings</h2>
+
+
+<hr>
+<div class="col-4">
+    <div>
+        <div class="row">
+            <div class="col-11">
+
+            </div>
+            <div class="col-1">
+                <a href>Logout</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <a href>Book Flight</a>
+            </div>
+            <div class="col-4">
+                <a href="">Manage Bookings</a>
+            </div>
+            <div class="col-4">
+                <a href="">Booking History</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<hr>
+<br>
+<body>
+    <p class="center"> Your Bookings</p>
+
+    <br>
+    <br>
+
+    <table class="table center thead-dark" border="1" *ngIf="allFlights?.length">
+        <thead>
+          <tr>
+            <th scope="col">Source</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Airline</th>
+            <th scope="col">Price</th>
+            <th scope="col">Cancel Booking</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flight of allFlights">
+                <td> {{flight.source}}</td>
+                <td> {{flight.destination}}</td>
+                <td>{{flight.airlineName}}</td>
+                <td>{{flight.price}}</td>
+                <td><button (click)="deleteBooking(flight)"class="btn btn-danger">Cancel</button></td>
+            </tr>
+        </tbody>
+      </table>
+
+    <br><br><br>
+<div class="center">
+    <input type="button" value="Continue Booking" class="center" routerLink="/bookFlight" />
+</div>
+</body>

@@ -1,0 +1,59 @@
+<h2>Manage Airlines</h2>
+
+<div class="col-6">
+    <div>
+        <div class="row">
+            <div class="col-11">
+           
+            </div>
+            <div class="col-1">
+                <a href>Logout</a>   
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-3">
+            <a href>Manage Schedules</a>   
+        </div>
+        <div class="col-3">
+            <a href="">Manage Airline</a> 
+        </div>
+        <div class="col-3">
+            <a href="">Manage Discounts</a>
+        </div>
+        <div class="col-3">
+            <a href>Reports</a>   
+        </div>    
+        
+        </div>    
+    </div>
+    </div>
+<hr>    
+<div>
+    <h3 class="center"> List Of Airlines</h3>
+</div>
+<br>
+
+<table class="table center thead-dark" border="1">
+    <thead>
+      <tr>
+        <th scope="col">Airline Name</th>
+        <th scope="col">Contact Number</th>
+        <th scope="col">Contact Address</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let airline of allAirline">
+            <td>{{airline.airlineName}}</td>
+            <td>{{airline.contactNumber}}</td>
+            <td>{{airline.contactAddress}}</td>
+            <td><button (click)="deleteAirline(airline)" class="btn btn-danger">Delete</button></td>
+        </tr>
+    </tbody>
+  </table>
+
+<hr>
+
+<nav class="center">
+    <a routerLink="/addAirline"> Add Airline</a>
+</nav>

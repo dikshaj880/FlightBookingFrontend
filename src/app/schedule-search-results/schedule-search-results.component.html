@@ -1,0 +1,58 @@
+<h2>Schedule Search Results</h2>
+<hr>
+<div class="col-6">
+    <div>
+        <div class="row">
+            <div class="col-11">
+           
+            </div>
+            <div class="col-1">
+                <a href>Logout</a>   
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-3">
+            <a href>Manage Schedules</a>   
+        </div>
+        <div class="col-3">
+            <a href="">Manage Airline</a> 
+        </div>
+        <div class="col-3">
+            <a href="">Manage Discounts</a>
+        </div>
+        <div class="col-3">
+            <a href>Reports</a>   
+        </div>    
+        
+        </div>    
+    </div>
+    </div>
+<hr>    
+<div>
+    <h3 class="center"> Search Results</h3>
+</div>
+<table class="table center thead-dark" border="1" *ngIf="allSchedules?.length">
+    <thead>
+      <tr>
+        <th scope="col">Source</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Airline</th>
+        <th scope="col">Price</th>
+        <th scope="col">Delete Scedule</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let schedule of allSchedules">
+            <td> {{schedule.source}}</td>
+            <td> {{schedule.destination}}</td>
+            <td>{{schedule.airlineName}}</td>
+            <td>{{schedule.price}}</td>
+            <td><button (click)="deleteSchedule(schedule)"class="btn btn-danger" >Delete</button></td>
+        </tr>
+    </tbody>
+  </table>
+<p class="center"> " More search results " </p>
+
+<div class="center">
+<a routerLink="/addSchedule">Add Schedule</a>
+</div>

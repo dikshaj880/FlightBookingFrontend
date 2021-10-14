@@ -1,0 +1,25 @@
+<hr>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+        </div>
+       <!-- <div class="col-sm-6 col-sm-offset-3" style="margin-top: 100px" > -->
+            <h3 class="text-capitalize text-primary text-justify">User Login</h3>
+            <form  #loginForm="ngForm">
+                <div class="form-group">   
+                    <label class="text-danger">Username</label>
+                    <input  type="text" class="form-control" id="username" name="username" ngModel/>
+                </div>
+                <div class="form-group">   
+                    <label class="text-danger">Password</label>
+                    <input type="password" class="form-control" id="password"  name="password" ngModel/>
+                </div>
+                <div class="form-group">                    
+                    <button type="button" class="btn btn-block btn-primary" (click)="loginUser(loginForm.value)"> Login</button>                                 
+                </div>
+                <a  class="btn btn-block btn-warning" routerLink="/userSignup">Not a user register here</a><br>  
+            </form>
+        </div>
+    </div>
+<!--/div> -->

@@ -1,0 +1,75 @@
+<h2>Book Flight - Apply Discount</h2>
+
+<hr>
+<div class="col-4">
+    <div>
+        <div class="row">
+            <div class="col-11">
+
+            </div>
+            <div class="col-1">
+                <a href>Logout</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <a href>Book Flight</a>
+            </div>
+            <div class="col-4">
+                <a href="">Manage Bookings</a>
+            </div>
+            <div class="col-4">
+                <a href="">Booking History</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<br>
+<hr>
+<div class="container">
+
+    <body>
+        <form>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Discount Code</label>
+                    <input type="text" class="form-control" id="discount_code" name="discount_code" />
+                </div>
+                <div class="form-group">
+                    <label class="center">Select Seat(Onward Journey)</label>
+                    <select id="seat(on)" name="seat(on)">
+                        <option> ----- </option>
+                        <option>1A</option>
+                        <option>1B</option>
+                        <option>2A</option>
+                        <option>2B</option>
+                        <option>3A</option>
+                        <option>3B</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="center">Select Seat(Return Journey)</label>
+                    <select id="seat(re)" name="seat(re)">
+                        <option> ----- </option>
+                        <option>1A</option>
+                        <option>1B</option>
+                        <option>2A</option>
+                        <option>2B</option>
+                        <option>3A</option>
+                        <option>3B</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="button" value="Apply" class="center" />
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="form-group">
+            <input type="button" value="Checkout" class="center" routerLink="/bookFlight" />
+        </div>
+
+    </body>
+</div>

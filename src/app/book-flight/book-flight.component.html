@@ -1,0 +1,97 @@
+<h2>Book-Flight</h2>
+
+
+<hr>
+<div class="col-4">
+    <div>
+        <div class="row">
+            <div class="col-11">
+
+            </div>
+            <div class="col-1">
+                <a href>Logout</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <a href>Book Flight</a>
+            </div>
+            <div class="col-4">
+                <a href="">Manage Bookings</a>
+            </div>
+            <div class="col-4">
+                <a href="">Booking History</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<br>
+<hr>
+<div class="container">
+
+    <body>
+        <form #bookFlightForm="ngForm">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Type Of Trip</label>
+                    <input type="radio" name="Ttrip" id="rbo" value="oneway" ngModel> Oneway
+                    <input type="radio" name="Ttrip" id="rbr" value="return" ngModel > Round Trip
+                </div>
+                <div class="form-group">
+                    <label>Source</label>
+                    <input type="text" class="form-control" id="source" name="source" ngModel  />
+                </div>
+                <div class="form-group">
+                    <label>Destination</label>
+                    <input type="text" class="form-control" id="Destination" name="Destination" ngModel />
+                </div>
+                <div class="form-group">
+                    <label class="center">Onward Journey</label>
+                    <input type="date" ngModel/>
+                </div>
+                <div class="form-group">
+                    <label class="center">Return Journey</label>
+                    <input type="date" ngModel/>
+                </div>
+                <div class="form-group">
+                    <label class="center">Meal Preference</label>
+                    <select id="meal" name="meal" ngModel >
+                        <option> ----- </option>
+                        <option>Veg</option>
+                        <option>Non-veg</option>
+                    </select>
+                </div>
+             <!--   <div>
+                    <label class="center">Have a Discount Coupon?</label>
+                    <input type="text"/> <a routerLink="/bookFlightDiscount"> Discount Coupons</a>
+                </div> -->
+            </div>
+        </form>
+        <br>
+        <div class="form-group">
+            <button type="button" class="center btn btn-primary" (click)="searchAirlineBySrcAndDest(bookFlightForm.value)"> Search</button>
+        </div>
+    </body>  
+</div>
+<table class="table center thead-dark" border="1" *ngIf="allFlightsBySrcDest?.length">
+    <thead>
+      <tr>
+        <th scope="col">Source</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Airline</th>
+        <th scope="col">Price</th>
+        <th scope="col">Book Flight</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let flight of allFlightsBySrcDest">
+            <td> {{flight.source}}</td>
+            <td> {{flight.destination}}</td>
+            <td>{{flight.airlineName}}</td>
+            <td>{{flight.price}}</td>
+            <td><button (click)="bookTicket(flight)"class="btn btn-danger">Book</button></td>
+        </tr>
+    </tbody>
+  </table>

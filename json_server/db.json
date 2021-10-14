@@ -1,0 +1,46 @@
+{
+  "airlines": [
+    {
+      "airline_name": "Jet Airways",
+      "contact_number": "7896451236",
+      "contactAddress": "Bangalore",
+      "id": 1
+    },
+    {
+      "airline_name": "Air India",
+      "contact_number": "8523654789",
+      "contactAddress": "New Delhi",
+      "id": 2
+    },
+    {
+      "airline_name": "Indigo",
+      "contact_number": "7896541236",
+      "contactAddress": "Mumbai",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "email": "demo@gmail.com",
+      "name": "demo",
+      "contact": "123",
+      "sques": "What is your favourite color?",
+      "sans": "black",
+      "gender": "male",
+      "password": "test123",
+      "cpass": "test123",
+      "id": 1
+    },
+    {
+      "email": "gagan@gmail.com",
+      "name": "Gaganpreet Singh",
+      "contact": "9041314578",
+      "sques": "What is your favourite color?",
+      "sans": "black",
+      "gender": "male",
+      "password": "test123",
+      "cpass": "test123",
+      "id": 2
+    }
+  ]
+}
